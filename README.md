@@ -19,3 +19,29 @@ LCD: Item name, price, total cost.
 OLED: Total weight in kilograms or grams.
 
 IoT Expandable: Design is modular for future integration with cloud platforms and mobile applications.
+
+How It Works
+Each product is assigned an RFID tag.
+
+The shopper places the RFID tag over the RFID reader (RC522) manually to scan the item.
+
+The system fetches the item's price and weight from a predefined database or code.
+
+The LCD screen displays the item's name, price, and continuously updated total cost.
+
+Meanwhile, the HX711 load cell measures the current weight of items in the trolley, which is shown on the OLED screen.
+
+This gives the user a full view of both spending and item weight while shopping.
+
+Tech Stack / Components
+Microcontroller: Arduino Uno / Nano
+
+RFID Module: MFRC522
+
+Load Cell Sensor: 1Kg/5Kg + HX711 Amplifier
+
+Display 1 (Price/Total): 16x2 LCD (with or without I2C)
+
+Display 2 (Weight): 0.95" SSD1306 OLED
+
+Power Supply: 5V USB or Li-ion battery
